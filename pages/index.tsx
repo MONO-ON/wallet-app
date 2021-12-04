@@ -1,9 +1,22 @@
+import { Button } from '@mui/material'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
+import { useRouter } from 'next/router'
+import React from 'react'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
+
+  const router = useRouter()
+
+  function onClickKakao() {
+    router.push('./kakao/kakao')
+  }
+
+  function onClickFacebook() {
+    router.push('./facebook/facebook')
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -14,7 +27,11 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="./kakao/kakao">카카오톡!</a>
+          Welcome to <Button onClick={onClickKakao} className={styles.title}>카카오톡!</Button>
+        </h1>
+        <br/>
+        <h1 className={styles.title}>
+          Welcome to <Button onClick={onClickFacebook} className={styles.title}>페이스북!</Button>
         </h1>
       </main>
 
@@ -32,3 +49,7 @@ const Home: NextPage = () => {
 }
 
 export default Home
+
+function stateRouter() {
+  throw new Error('Function not implemented.')
+}
