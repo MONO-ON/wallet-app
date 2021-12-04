@@ -1,8 +1,8 @@
-import { Chat } from "@mui/icons-material";
-import { Box, Button, Stack } from "@mui/material";
-import React, { useState } from "react";
-import Chatting from "./tap/chat";
-import Gift from "./tap/gift";
+import { Box, Button, Stack } from "@mui/material"
+import React, { useState } from "react"
+import Chatting from "./tap/chat"
+import Gift from "./tap/gift"
+
 
 
 export default function Kakao() {
@@ -12,8 +12,8 @@ export default function Kakao() {
     // console.log(parent[0], parent[0])
     // console.log(x, v)
 
-    const [content, setContent] = useState('내용입니다.')
-    const [title, setTitle] = useState('카카오톡')
+    const [content, setContent] = useState<any>('내용입니다.')
+    const [title, setTitle] = useState<any>('카카오톡')
     // const state = useState('내용입니다.')
     // state[0] = content
     // state[1] = setContent
